@@ -52,6 +52,8 @@ public class StudentServlet extends HttpServlet {
                 this.studentService.save(new Student(gender,number,name,dormitoryId));
                 resp.sendRedirect("/student?method=list");
                 break;
+            case "update":
+                break;
 
         }
     }

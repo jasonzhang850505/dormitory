@@ -202,7 +202,7 @@
                                             <div class="col-sm-9">
                                                 <select class="form-control" name="dormitory_id">
                                                     <c:forEach items="${dormitoryList}" var="dormitory">
-                                                        <option value="${dormitory.id}" class="dormitory">${dormitory.id}</option>
+                                                        <option value="${dormitory.id}" class="dormitory">${dormitory.name}</option>
                                                     </c:forEach>
                                                 </select>
                                             </div>
