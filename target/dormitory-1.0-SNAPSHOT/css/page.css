@@ -1,0 +1,42 @@
+* {
+	margin:0;
+	padding:0;
+}
+#pageBox {
+	width:30%;
+	height:30px;
+	line-height:30px;
+}
+#pageBox span {
+	display:inline-block;
+	width:60px;
+	height:24px;
+	line-height:24px;
+	text-align:center;
+	color:#fff;
+	background:#8E24AA;
+	border-radius:5px;
+}
+#pageNav {
+	display:inline-block;
+}
+#pageNav a {
+	display:inline-block;
+	width:24px;
+	height:24px;
+	line-height:24px;
+	text-align:center;
+	color:#6157e9;
+	text-decoration:none;
+	border-radius:5px;
+}
+#pageNav a.active,#pageNav a:hover {
+	background:#6157e9;
+	color:#eeeeee;
+}
+#prev:hover {
+	cursor:pointer;
+}
+#next:hover {
+	cursor:pointer;
+}

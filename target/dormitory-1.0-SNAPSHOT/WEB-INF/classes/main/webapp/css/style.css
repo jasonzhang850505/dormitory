@@ -1,0 +1,52 @@
+body {
+	background: url(../img/1.jpg);
+	animation-name: bg;
+	animation-duration: 6s;
+	/*变化时间*/
+	animation-delay: 2s; animation-iteration-count: infinite;
+	animation-play-state: running;
+}
+
+@keyframes bg {
+	0% {
+		background: url("../img/1.jpg");
+	}
+
+	34% {
+		background: url("../img/2.jpg");
+	}
+
+	67% {
+		background: url("../img/3.jpg");
+	}
+
+	100% {
+		background: url("../img/1.jpg");
+	}
+}
+
+.form {
+	background: rgba(0, 0, 0, 30%);
+	width: 550px;
+	height: 300px;
+	margin-left: 200px;
+	margin-top: 400px;
+	text-align: left;
+}
+
+/* 阴影 */
+.fa {
+	display: inline-block;
+	top: 27px;
+	left: 6px;
+	position: relative;
+	color: #ccc;
+}
+
+input[type="text"] input[type="password"] {
+	padding-left: 26px;
+}
+
+.checkbox {
+	padding-left: 21px;
+}
