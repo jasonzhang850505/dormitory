@@ -31,4 +31,6 @@ public interface StudentService {
      * @return the integer
      */
     public Integer save(Student student);
+
+    public Integer update(Student student);
 }

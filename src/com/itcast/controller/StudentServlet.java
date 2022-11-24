@@ -53,7 +53,17 @@ public class StudentServlet extends HttpServlet {
                 resp.sendRedirect("/student?method=list");
                 break;
             case "update":
-                break;
+                String idStr = req.getParameter("id");
+                Integer id = Integer.parseInt(idStr);
+                dormitoryIdStr = req.getParameter("dormitory_id");
+                dormitoryId = Integer.parseInt(dormitoryIdStr);
+                number = req.getParameter("number");
+                name = req.getParameter("name");
+                gender = req.getParameter("gender");
+                this.studentService.update(new Student(id,number,name,gender,dormitoryId));
+                resp.sendRedirect("/student?method=list");
+
+
 
         }
     }

@@ -83,7 +83,7 @@
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default "
                                             data-id="${student.id}"
-                                            data-dormitory-id="${student.dormitoryName}"
+                                            data-dormitory-id="${student.dormitoryID}"
                                             data-number="${student.number}"
                                             data-name="${student.name}"
                                             data-gender="${student.gender}"
@@ -175,7 +175,7 @@
                 </form>
 
                 <!-- update框示例（Modal） -->
-                <form method="post" action="/student/update" class="form-horizontal" style="margin-top: 0px" role="form"
+                <form method="post" action="/student?method=update" class="form-horizontal" style="margin-top: 0px" role="form"
                       id="form_data" style="margin: 20px;">
                     <div class="modal fade" id="updateUserModal" tabindex="-1"
                          role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -201,6 +201,9 @@
                                             <label for="user_id" class="col-sm-3 control-label">宿舍</label>
                                             <div class="col-sm-9">
                                                 <select class="form-control" name="dormitory_id">
+<%--                                                    <option value="id">1</option>--%>
+<%--                                                    <option value="id">2</option>--%>
+<%--                                                    <option value="id">3</option>--%>
                                                     <c:forEach items="${dormitoryList}" var="dormitory">
                                                         <option value="${dormitory.id}" class="dormitory">${dormitory.name}</option>
                                                     </c:forEach>
@@ -312,7 +315,7 @@
         modal.find('#number').val(number)
         modal.find('#name').val(name)
         modal.find('#time').val(time)
-        modal.find('#oldDormitoryId').val(dormitory_id)
+        // modal.find('#oldDormitoryId').val(dormitory_id)
         var list = modal.find('.gender')
         for(var i=0;i<list.length;i++){
             if(gender == $(list.get(i)).val()){

@@ -84,6 +84,31 @@ public class StudentDaoImpl implements StudentDao {
     }
 
     @Override
+    public Integer update(Student student) {
+        String sql;
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        Integer result = null;
+        try {
+            conn = JDBCUtils.getConnection();
+            sql = "update student set number=?, name=?, gender=?, dormitory_id=? where id=?";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1,student.getNumber());
+            pstmt.setString(2,student.getName());
+            pstmt.setString(3,student.getGender());
+            pstmt.setInt(4,student.getDormitoryID());
+            pstmt.setInt(5,student.getId());
+            result = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCUtils.close(null, pstmt, conn);
+        }
+        return result;
+    }
+
+    @Override
     public Integer save(Student student) {
         // 开始连接数据库
         String sql;

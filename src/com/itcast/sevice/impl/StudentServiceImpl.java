@@ -36,4 +36,11 @@ public class StudentServiceImpl implements StudentService {
         if (save !=1) throw new RuntimeException("添加学生信息失败");
         return save;
     }
+
+    @Override
+    public Integer update(Student student) {
+        Integer update = this.studentDao.update(student);
+        if (update !=1) throw new RuntimeException("更新学生信息失败");
+        return update;
+    }
 }

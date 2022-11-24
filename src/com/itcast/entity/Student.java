@@ -43,6 +43,22 @@ public class Student {
     }
 
     /**
+     *
+     * @param id         the id
+     * @param number     the number
+     * @param name       the name
+     * @param gender     the gender
+     * @param dormitoryID the dormitoryID
+     */
+    public Student(Integer id, String number, String name, String gender, Integer dormitoryID) {
+        this.id = id;
+        this.number = number;
+        this.name = name;
+        this.gender = gender;
+        this.dormitoryID = dormitoryID;
+    }
+
+    /**
      * Instantiates a new Student.
      *
      * @param number      the number
